@@ -17,10 +17,7 @@ export default function Home() {
 
 const {Pool} = pg;
 const pool = new Pool({
-    host: 'dpg-cp5i4nv79t8c73eunnig-a.oregon-postgres.render.com',
-    user: 'test',
-    password: process.env.DB_PASS,
-    database: "hello_dm83",
+    connectionString: process.env.DATABASE_URL,
     max: 1,
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,
